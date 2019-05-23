@@ -12,5 +12,5 @@
 1) Install node.js, angular-cli on your machine
 2) Then open frontendMusic folder in any IDE and run command 'npm --install' 
 3) This installs node modules specifies in package.json
-4) After installing, run the command ng serve --open
+4) After installing, run the command 'ng serve --open'
 5) This will open http://localhost:4200/ on your browser
