@@ -1,0 +1,31 @@
+<div class="container-fluid col-lg-5 col-md-7">
+  <h1 class="text-center">Update Movie</h1>
+
+  <!--<label class="sr-only" for="username">Title*</label>-->
+  <form #movieForm="ngForm" (ngSubmit)="updateMovie(movieForm.value)">
+  <div class="input-group mb-2 mr-sm-2 mb-sm-2">
+    <div class="input-group-addon"><span class="fa fa-film"></span> </div>
+    <input [(ngModel)]="movie.title"
+           id="username"
+           name="title"
+           class="form-control"
+           required
+           placeholder="title"/>
+  </div>
+
+  <!--<label class="sr-only" for="password">Director</label>-->
+  <div class="input-group mb-2 mr-sm-2 mb-sm-2">
+    <div class="input-group-addon"><span class="fa fa-user"></span> </div>
+    <input [(ngModel)]="movie.director"
+           id="password"
+           name="director"
+           class="form-control"
+           required
+           placeholder="director"/>
+  </div>
+
+    <button type="submit" [disabled]="movieForm.form.invalid"  class="btn btn-primary btn-block vsk-ngclick-a col-5 mx-auto">Update Movie</button>
+  </form>
+  <br/>
+  <a routerLink="/movie-list" class="btn btn-danger btn-block col-5 mx-auto">Cancel</a>
+</div>

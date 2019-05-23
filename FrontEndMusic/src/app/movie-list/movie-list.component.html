@@ -1,0 +1,16 @@
+<h2>Movies List</h2>
+<!--<div *ngFor="let movie of movies">-->
+  <!--<a routerLink="/movie-edit/{{movie.id}}">{{movie.title}}</a>-->
+<!--</div>-->
+
+<div class="card-columns my-4">
+  <div class="card"  style="width: 12rem;" *ngFor="let movie of movies">
+    <a routerLink="/movie-edit/{{movie.id}}"><img class="card-img-top" src="../../assets/default-trackImage.jpg" alt="{{movie.title}}"></a>
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text"><b>Director:</b> {{movie.director}}</p>
+      <a routerLink="/movie-edit/{{movie.id}}" class="btn btn-primary">Edit</a>
+      <button style="margin-left: 9px;" (click)="deleteMovie(movie.id)" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>
